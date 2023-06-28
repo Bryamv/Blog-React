@@ -1,1 +1,1 @@
-# Movie-React-App
+# Blog-React-App
