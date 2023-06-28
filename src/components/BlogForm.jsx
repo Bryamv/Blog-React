@@ -1,7 +1,23 @@
-const BlogForm = () => {
+const BlogForm = ({ publish }) => {
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    const title = e.target.title.value;
+    const content = e.target.content.value;
+
+    if (title.length < 1 || content.length < 1) {
+      return;
+    }
+    const blog = {
+      id: new Date().getTime(),
+      title,
+      content,
+    };
+    publish(blog);
+    e.target.reset();
+  };
   return (
     <>
-      <form action="">
+      <form onSubmit={handleSubmit}>
         <div className="mb-3">
           <label htmlFor="title" className="form-label">
             Title
@@ -24,7 +40,9 @@ const BlogForm = () => {
             placeholder="content"
           ></textarea>
         </div>
-        <button className="btn btn-success w-100">Publicar</button>
+        <button className="btn btn-success w-100" type="submit">
+          Publicar
+        </button>
       </form>
     </>
   );

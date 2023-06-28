@@ -1,11 +1,12 @@
 import BlogListItem from "./BlogListItem";
 
-const BlogList = () => {
+const BlogList = ({ blogs, deleteBlog }) => {
   return (
     <>
-      <h1>Blog</h1>
-      <ul className="list-group">
-        <BlogListItem />
+      <ul className="list-group list-group-flush">
+        {blogs.map((blog) => (
+          <BlogListItem key={blog.id} blog={blog} deleteBlog={deleteBlog} />
+        ))}
       </ul>
     </>
   );
