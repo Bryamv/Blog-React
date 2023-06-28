@@ -1,6 +1,6 @@
 # Blog-React-App
 
-Este es un blog creado con el objetivo de practicar el uso de `useReducer` y `localStorage` en React. A
+Este es un blog creado con el objetivo de practicar el uso de `useReducer` y `localStorage` en React.
 
 Construyendo y mejorando esta aplicación de blog, aplicando conceptos clave de React y aprovechando al máximo sus poderosas capacidades.
 
